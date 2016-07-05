@@ -6,7 +6,7 @@
     'ui.router',
     'ngStorage',
     'ngAnimate',
-
+    'yaru22.angular-timeago'
     ])
 
 })();

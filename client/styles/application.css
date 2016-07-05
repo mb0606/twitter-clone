@@ -26,11 +26,14 @@
     position: absolute;
     right:40px
 }
-
-#tweets .tweet {
-    border-bottom: none;
-
+img.img-responsive {
+    max-width: 100px;
 }
+.meta-data {
+    margin-top: 15px;
+}
+
+
 
 /*
 #search {

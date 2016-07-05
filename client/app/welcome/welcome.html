@@ -1,10 +1,31 @@
 <div class="row">
 
-
+<div>
   <p class="alert alert-danger" ng-show="(submitted && !filteredTweets.length)">That user doesn't exist. Please enter a valid username !!</p>
-  </div>
+</div>
 
-<div class="col-md-8 col-md-offset-2">
+
+
+<div class="col-md-4 ">
+
+
+<div class="panel panel-default" ng-show="(filteredTweets.length > 0)">
+  <div class="panel-heading user-name">{{vm.userInfo.name}}</div>
+
+   <div class="panel-body">
+      <img class="img-responsive" src={{vm.userInfo.image}} alt="">
+      <div class="meta-data">
+           <div class="follows-count">Followers Count: <span>{{vm.userInfo.follows}}</span></div>
+           <div class="friends-count">Friends Count  : <span>{{vm.userInfo.friends}}</span></div>
+      </div>
+   </div>
+</div>
+
+
+    </div>
+
+
+<div class="col-md-8">
 <form class="form-inline">
 
   <div class="form-group">
@@ -19,14 +40,20 @@
 
 
 <!--ALL Tweets -->
-<div ng-repeat="tweet in filteredTweets=(vm.tweets |orderBy:'date':true)" id="tweets">
+<div ng-repeat="tweet in filteredTweets=(vm.tweets |orderBy:'created_at':true); " id="tweets">
 
 
 
 
-    <div class="tweet"  >
-      <p class="">{{tweet.text}}</p>
-      <p class="date">{{tweet.created_at}}</p>
+    <div class="tweet">
+      <p class="content">{{tweet.text}}</p>
+      <p class="date">{{tweet.created_at | timeAgo}}</p>
+
+  <i title="Up Votes" ng-click="vm.upVote(tweet)" class="fa fa-arrow-circle-up fa-1x" ></i>
+  <i title="Down Votes" ng-click="vm.downVote(tweet)" class="fa fa-arrow-circle-down fa-1x" ></i>
+   Vote: {{tweet.vote || 0}}
+
+
     </div>
 
 
