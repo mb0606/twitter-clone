@@ -7,15 +7,16 @@
  }
 
  body {
-
+    background-image: url("../images/back-img.jpg");
    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
  }
 
 .form-inline {
-    text-align: center;
+    text-align: right;
 }
 #tweets {
     margin-top: 40px;
+    background: white;
 }
 #tweets .tweet {
     padding: 23px 10px;
@@ -27,33 +28,22 @@
     right:40px
 }
 img.img-responsive {
-    max-width: 100px;
+    max-width: 150px;
 }
 .meta-data {
     margin-top: 15px;
 }
 
-
-
-/*
-#search {
-  max-width: 250px;
+.spacer {
+    padding:20px;
 }
-*/
-/*
 
- input[type="text"], input[type="email"], input[type="date"], input[type="password"], textarea {
-   width: 100%;
-   margin-bottom: 1rem;
-   border: 1px solid #C0C1C1;
-   border-radius: .4rem;
- }
 
- input[type="text"], input[type="email"], input[type="password"] {
-   height: 40px;
- }
+.panel.panel-default .panel-heading {
+    background: white;
+}
 
- textarea {
-   min-height: 200px;
- }
-*/
+.follows-count span, .friends-count span {
+    font-style: bold;
+    font-size: 1em;
+}

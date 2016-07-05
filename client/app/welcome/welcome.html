@@ -4,7 +4,7 @@
   <p class="alert alert-danger" ng-show="(submitted && !filteredTweets.length)">That user doesn't exist. Please enter a valid username !!</p>
 </div>
 
-
+<div class="spacer"></div>
 
 <div class="col-md-4 ">
 
@@ -15,8 +15,8 @@
    <div class="panel-body">
       <img class="img-responsive" src={{vm.userInfo.image}} alt="">
       <div class="meta-data">
-           <div class="follows-count">Followers Count: <span>{{vm.userInfo.follows}}</span></div>
-           <div class="friends-count">Friends Count  : <span>{{vm.userInfo.friends}}</span></div>
+           <div class="follows-count">Followers Count: <strong class="count">{{vm.userInfo.follows}}</strong></div>
+           <div class="friends-count">Friends Count  : <strong class="count">{{vm.userInfo.friends}}</strong></div>
       </div>
    </div>
 </div>
@@ -40,7 +40,7 @@
 
 
 <!--ALL Tweets -->
-<div ng-repeat="tweet in filteredTweets=(vm.tweets |orderBy:'created_at':true); " id="tweets">
+<div ng-repeat="tweet in filteredTweets=(vm.tweets | orderBy:'created_at':true); " id="tweets">
 
 
 
