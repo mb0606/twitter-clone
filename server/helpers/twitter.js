@@ -13,18 +13,15 @@ var count = 25;
 
 
 exports.fetchTweets = function(req, res, username, callback){
-    var params = {screen_name: "nodejs", count: count}
+    var params = {screen_name: username, count: count}
     console.log("USERNAME PARAMS" , username);
     client.get('statuses/user_timeline', params, function(error, tweets, res){
         if(error){
-            console.error(error);
-        } else if (tweets.length === 0){
-            console.log("there are not matches for that user");
+            callback(error);
         } else {
-//            console.log("tweets :: ", tweets);
-            callback(tweets);
+//           console.log("tweets :: ", tweets);
+            callback(null, tweets);
 //            console.log("USER ON INDEX 0" , tweets[0].user.name);
-
         }
 
     });

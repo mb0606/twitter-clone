@@ -20,10 +20,12 @@
           url:'/api/tweets/' + username,
         })
         .then(function(res){
+            console.log("this is data line 23 Services")
           return res.data
         })
         .catch(function(err){
-          console.log("line 27: Services ", err)
+            console.log("line 27 err in Services",err);
+          return res.err
         })
       }
 

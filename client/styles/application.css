@@ -27,7 +27,7 @@
     right:40px
 }
 
-#tweets .tweet:last-child {
+#tweets .tweet {
     border-bottom: none;
 
 }
