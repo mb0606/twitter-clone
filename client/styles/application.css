@@ -1,0 +1,56 @@
+/*
+ *= require_self
+ */
+ * {
+   box-sizing: border-box;
+   -webkit-font-smoothing: antialiased;
+ }
+
+ body {
+
+   font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+ }
+
+.form-inline {
+    text-align: center;
+}
+#tweets {
+    margin-top: 40px;
+}
+#tweets .tweet {
+    padding: 23px 10px;
+    position:relative;
+    border-bottom: 1px #ddd solid;
+}
+.tweet .date{
+    position: absolute;
+    right:40px
+}
+
+#tweets .tweet:last-child {
+    border-bottom: none;
+
+}
+
+/*
+#search {
+  max-width: 250px;
+}
+*/
+/*
+
+ input[type="text"], input[type="email"], input[type="date"], input[type="password"], textarea {
+   width: 100%;
+   margin-bottom: 1rem;
+   border: 1px solid #C0C1C1;
+   border-radius: .4rem;
+ }
+
+ input[type="text"], input[type="email"], input[type="password"] {
+   height: 40px;
+ }
+
+ textarea {
+   min-height: 200px;
+ }
+*/

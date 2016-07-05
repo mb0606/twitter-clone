@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Week-6 Assesment</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./styles/application.css">
+
+
+
+
+  </head>
+  <body ng-app="tweetApp">
+
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+<!--            <img alt="Brand" src="...">-->
+         Twitter Clone
+          </a>
+        </div>
+      </div>
+    </nav>
+
+  <!-- <div class="notice"> this will be an notification </div> -->
+  <div class="container">
+  <row>
+  <div ui-view></div>
+</row>
+  </div>
+
+  <!-- <footer> 		&copy; Marco Berardini 2016 </footer> -->
+
+    <!-- Library Files -->
+    <script>console.log("APP LAYOUT")</script>
+
+    <script type="text/javascript" src="./lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./lib/angular-animate/angular-animate.js"></script>
+
+
+    <script type="text/javascript" src="./lib/ngstorage/ngStorage.min.js"></script>
+    <!-- App Settings -->
+    <script src="./app/app.js"></script>
+
+  <script src="./app/dependencies.js"></script>
+  <script src="./app/config.js"></script>
+  <!-- <script src="./app/run.js"></script> -->
+  <script src="./app/services/services.js"></script>
+  <script src="./app/welcome/controller.js"></script>
+
+
+  </body>
+</html>
