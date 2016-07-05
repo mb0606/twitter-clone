@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 
-app.set('port', 8080);
+app.set('port', process.env.PORT ||  8080);
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/../client'));
 console.log("In server.js file")
