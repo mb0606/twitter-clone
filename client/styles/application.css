@@ -7,25 +7,59 @@
  }
 
  body {
-    background-image: url("../images/back-img.jpg");
+    background-image: url("../images/splat.jpg");
    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
  }
 
 .form-inline {
     text-align: right;
 }
+.form-group {
+}
+img.logo {
+    width:60px;
+}
+
+.alert-danger {
+    color: #FF3838;
+    font-size: 1.2em;
+    font-style: bold;
+    background-color: rgba(255,255,255,.8);
+    border: 2px #FF3838 solid;
+}
+.navbar.navbar-default {
+   background: white;
+    height:80px;
+}
+.spinner {
+    width:100%;
+    text-align: center;
+}
+#spinner {
+    display: none;
+}
 #tweets {
     margin-top: 40px;
-    background: white;
+    background: rgba(255,255,255,.75);
 }
 #tweets .tweet {
     padding: 23px 10px;
     position:relative;
-    border-bottom: 1px #ddd solid;
+    border: 1px #ddd solid;
+    border-radius: 5px;
 }
 .tweet .date{
     position: absolute;
     right:40px
+}
+.back-form {
+    height: 100px;
+/*    background: rgba(255,255,255,.7);*/
+    padding: 25px;
+}
+.col-md-8 {
+    background: rgba(255,255,255,.75);
+
 }
 img.img-responsive {
     max-width: 150px;
@@ -34,6 +68,10 @@ img.img-responsive {
     margin-top: 15px;
 }
 
+label {
+    font-size: 1em;
+    background: rgba(255,255,255,.55);
+}
 .spacer {
     padding:20px;
 }
