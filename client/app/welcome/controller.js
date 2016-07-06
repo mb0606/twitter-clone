@@ -12,6 +12,9 @@
       vm.tweets = {};
       vm.userInfo = {}
 
+    vm.initHash= function() {
+        vm.hashes = ""
+    }
     vm.initVote = function(tweet){
            tweet.vote = 0;
     }
@@ -32,13 +35,22 @@
        tweet.vote--;
     }
 
+    vm.setHashtag = function (hash){
+        vm.hashes = ""
+        vm.hashes = hash
+    }
+    vm.clearHash = function(){
+        vm.hashes = "";
+    }
 
-
-
+    vm.emptyOrNull = function(hashTag){
+    return hashTag.length !== 0
+    }
       vm.getTweets = function(username) {
           console.log("line 16 Welcome controller", username)
         vm.tweets = {};
-        vm.message = ""
+        vm.message = "";
+        vm.hashes = "";
         vm.userInfo = {}
         Welcome.getTweetsByUser(username).then(function (tweets) {
           console.log('this is data', tweets);

@@ -19,7 +19,19 @@
 img.logo {
     width:60px;
 }
-
+#aboveTweets  {
+    text-align: center;
+}
+#hashes {
+ clear: bottom;
+}
+ span.hashTag {
+    float:left;
+    font-weight: bold;
+    color:#9D2273;
+    font-size:1.25em;
+    padding: 0 10px;
+}
 .alert-danger {
     color: #FF3838;
     font-size: 1.2em;

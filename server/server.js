@@ -18,6 +18,9 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + '/../client'));
 console.log("In server.js file")
 app.use('/api', routes);
+  app.use(function(req, res) {
+     res.send('404: Page not Found', 404);
+  });
 
 
 

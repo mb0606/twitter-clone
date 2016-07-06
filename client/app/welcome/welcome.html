@@ -34,6 +34,8 @@
     <input ng-model="vm.username" type="text" class="form-control" placeholder="  Search tweets ...">
   </div>
   <button ng-click="vm.getTweets(vm.username); submitted=true" type="submit" class="btn btn-default">Search</button>
+  <button ng-click="vm.clearHash(); submitted=true" type="submit" class="btn btn-default">Clear #</button>
+
 </div>
 <div class="spinner">
 <img id="spinner" ng-src="./images/spinner2.gif" width="50px;">
@@ -42,10 +44,17 @@
 </form>
 
 
+<div ng-repeat="tweet in vm.tweets" ng-init='vm.initVote(tweet)' id="aboveTweets" >
+    <div ng-repeat="hashTag in tweet.entities.hashtags | filter:vm.emptyOrNull" id="hashes">
 
+        <span ng-click="vm.setHashtag(hashTag.text)"  class="hashTag">#{{hashTag.text}} </span>
+
+
+    </div>
+</div>
 
 <!--ALL Tweets -->
-<div ng-repeat="tweet in filteredTweets=(vm.tweets | orderBy:['vote','created_at']:true ); " ng-init='vm.initVote(tweet)' id="tweets">
+<div ng-repeat="tweet in filteredTweets=(vm.tweets | filter:vm.hashes | orderBy:['vote','created_at']:true ); " ng-init='vm.initVote(tweet)' id="tweets">
 
 
 
