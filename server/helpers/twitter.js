@@ -1,12 +1,13 @@
 var Twitter = require('twitter');
-var Q  = require('q');
+var keys  = require('./keys.js');
 
+console.log("helpers", keys);
 
 var client = new Twitter({
-  consumer_key: 'TujzccgLW9fc5EehLrkkkZwLD',
-  consumer_secret: 'nSc0ZWLZkTrxr9hepGpEvkdb2smSjDqdmEfEGDRdLgDqyWuOQx',
-  access_token_key: '187219501-CVWw8rfduzmb7W2bQngtXhXP86aGZfJyPJ5Dod09',
-  access_token_secret: 'kWdAzjzm5nZdQR7NvXVJY3kpfuMOVRwp3BfBBHUppQu3V'
+  consumer_key: keys.consumer_key,
+  consumer_secret: keys.consumer_secret,
+  access_token_key: keys.access_token_key,
+  access_token_secret: keys.access_token_secret
 });
 
 var count = 25;
