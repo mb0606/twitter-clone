@@ -1,7 +1,7 @@
 var Twitter = require('twitter');
 //var keys  = require('./keys.js');
 
-console.log("helpers", keys);
+//console.log("helpers", keys);
 //
 //var client = new Twitter({
 //  consumer_key:  process.env.consumer_key ||  keys.consumer_key,
