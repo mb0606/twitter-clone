@@ -36,7 +36,7 @@
   <button ng-click="vm.getTweets(vm.username); submitted=true" type="submit" class="btn btn-default">Search</button>
 </div>
 <div class="spinner">
-<img id="spinner" ng-src="./images/spinner.gif">
+<img id="spinner" ng-src="./images/spinner2.gif" width="50px;">
 </div>
 
 </form>
@@ -45,18 +45,19 @@
 
 
 <!--ALL Tweets -->
-<div ng-repeat="tweet in filteredTweets=(vm.tweets | orderBy:'created_at':true); " id="tweets">
+<div ng-repeat="tweet in filteredTweets=(vm.tweets | orderBy:['vote','created_at']:true ); " ng-init='vm.initVote(tweet)' id="tweets">
 
 
 
 
-    <div class="tweet">
+    <div class="tweet" >
       <p class="content">{{tweet.text}}</p>
       <p class="date">{{tweet.created_at | timeAgo}}</p>
 
+
   <i title="Up Votes" ng-click="vm.upVote(tweet)" class="fa fa-arrow-circle-up fa-1x" ></i>
   <i title="Down Votes" ng-click="vm.downVote(tweet)" class="fa fa-arrow-circle-down fa-1x" ></i>
-   Vote: {{tweet.vote || 0}}
+<!--   Vote: {{tweet.vote || 0}}-->
 
 
     </div>

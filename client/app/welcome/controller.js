@@ -12,8 +12,13 @@
       vm.tweets = {};
       vm.userInfo = {}
 
-
+    vm.initVote = function(tweet){
+           tweet.vote = 0;
+    }
     vm.upVote = function(tweet) {
+        if(!tweet.vote){
+            tweet.vote = 0;
+        }
         console.log(tweet)
         tweet.vote++;
         console.log(tweet.vote)
@@ -21,6 +26,9 @@
     }
 
     vm.downVote = function (tweet) {
+        if(!tweet.vote){
+            tweet.vote = 0;
+        }
        tweet.vote--;
     }
 
